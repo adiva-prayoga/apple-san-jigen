@@ -5,6 +5,7 @@ import { pauseImg, playImg, replayImg } from "../utils";
 import { useGSAP } from "@gsap/react";
 
 const VideoCarousel = () => {
+  const sliderRef = useRef([]);
   const videoRef = useRef([]);
   const videoSpanRef = useRef([]);
   const videoDivRef = useRef([]);
@@ -24,8 +25,15 @@ const VideoCarousel = () => {
   useGSAP(() => {
     gsap.to("#slider", {
       transform: `translateX(${-100 * videoId}%)`,
+      scale: 0.75,
       duration: 2,
       ease: "power2.inOut",
+    });
+
+    gsap.to(sliderRef.current[videoId], {
+      opacity: 1,
+      scale: 1,
+      duration: 2,
     });
 
     gsap.to("#video", {
@@ -161,7 +169,12 @@ const VideoCarousel = () => {
     <>
       <div className="flex items-center">
         {hightlightsSlides.map((list, i) => (
-          <div key={list.id} id="slider" className="sm:pr-20 pr-10">
+          <div
+            ref={(el) => (sliderRef.current[i] = el)}
+            key={list.id}
+            id="slider"
+            className="sm:pr-20 pr-10 opacity-25"
+          >
             <div className="video-carousel_container">
               <div className="w-full h-full flex-center rounded-3xl overflow-hidden bg-black">
                 <video
