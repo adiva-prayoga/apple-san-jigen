@@ -1,5 +1,6 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { yellowImg } from "../utils";
+import { animateWithGsapTimeline } from "../utils/animation";
 import { models, sizes } from "../constant";
 
 import { useGSAP } from "@gsap/react";
@@ -31,6 +32,24 @@ const Model = () => {
   const [smallRotation, setSmallRotation] = useState(0);
   const [largeRotation, setLargeRotation] = useState(0);
 
+  const tl = gsap.timeline();
+
+  useEffect(() => {
+    if (size === "large") {
+      animateWithGsapTimeline(tl, small, smallRotation, "#view1", "#view2", {
+        transform: "translateX(-100%)",
+        duration: 2,
+      });
+    }
+
+    if (size === "small") {
+      animateWithGsapTimeline(tl, large, largeRotation, "#view2", "#view1", {
+        transform: "translateX(0)",
+        duration: 2,
+      });
+    }
+  }, [size]);
+
   useGSAP(() => {
     gsap.to("#heading", {
       opacity: 1,
@@ -56,7 +75,7 @@ const Model = () => {
               size={size}
             />
 
-            {/* <ModelView
+            <ModelView
               index={2}
               groupRef={large}
               gsapType="view2"
@@ -64,7 +83,7 @@ const Model = () => {
               setRotationState={setLargeRotation}
               item={model}
               size={size}
-            /> */}
+            />
 
             <Canvas
               className="w-full h-full"
