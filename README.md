@@ -1,6 +1,6 @@
 ## Overview
 
-This project is a learning exercise to create a landing page inspired by the Apple website. It uses modern web development tools to ensure a smooth and high-performance experience.
+I created this project as a learning exercise to develop a landing page inspired by the Apple website. It's a great opportunity for me to explore modern web development tools and ensure a smooth, high-performance user experience.
 
 ## Table of Contents
 
@@ -42,7 +42,7 @@ Ensure you have the following installed on your local machine:
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your-username/apple-like-landing-page.git
+   git clone git@github.com:adiva-prayoga/apple-san-jigen.git
    ```
 2. Install NPM packages
    ```sh
