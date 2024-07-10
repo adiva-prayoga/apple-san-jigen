@@ -13,6 +13,8 @@ const VideoCarouselControl = ({ isLastVideo, isPlaying, handleProcess }) => {
               ? () => handleProcess("play")
               : () => handleProcess("pause")
         }
+        width={24}
+        height={24}
       />
     </button>
   );

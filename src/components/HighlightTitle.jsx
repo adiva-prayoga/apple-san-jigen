@@ -26,11 +26,24 @@ const HighlightTitle = () => {
 
       <div className="flex flex-wrap items-end gap-5">
         <p className="link">
-          Watch the film <img src={watchImg} alt="watch" className="ml-2" />
+          Watch the film
+          <img
+            src={watchImg}
+            alt="watch"
+            className="ml-2"
+            width={20}
+            height={20}
+          />
         </p>
         <p className="link">
           Watch the event
-          <img src={rightImg} alt="right" className="ml-2" />
+          <img
+            src={rightImg}
+            alt="right"
+            className="ml-2 w-100 h-100"
+            width={7}
+            height={11}
+          />
         </p>
       </div>
     </div>

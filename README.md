@@ -1,7 +1,3 @@
-## Overview
-
-I created this project as a learning exercise to develop a landing page inspired by the Apple website. It's a great opportunity for me to explore modern web development tools and ensure a smooth, high-performance user experience.
-
 ## Table of Contents
 
 - [Tech Stack](#tech-stack)
@@ -19,13 +15,6 @@ I created this project as a learning exercise to develop a landing page inspired
 - [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction): A React renderer for Three.js, allowing for the creation of 3D graphics.
 - [Gsap](https://gsap.com/): A robust JavaScript library for creating high-performance animations.
 - [Sentry](https://sentry.io/): A tool for monitoring and fixing crashes in real-time, providing visibility into production deployments.
-
-## Features
-
-- **Responsive Design:** Adapts seamlessly to different screen sizes.
-- **3D Graphics:** Enhanced with React Three Fiber for dynamic visual effects.
-- **Smooth Animations:** Implemented using GSAP for a high-quality user experience.
-- **Error Monitoring:** Integrated with Sentry for real-time error tracking and performance monitoring.
 
 ## Getting Started
 
